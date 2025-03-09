@@ -2,7 +2,7 @@ const express = require("express");
 const {
   getLoginForm,
   generateToken,
-} = require("../controllers/authController");
+} = require("../controllers/getTokenRoute");
 
 const router = express.Router();
 

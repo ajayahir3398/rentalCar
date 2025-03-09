@@ -22,9 +22,7 @@ const carSchema = new mongoose.Schema(
     rentalPricePerDay: { type: Number, required: true },
     rentalPricePerHour: { type: Number, required: true },
     availability: { type: Boolean, default: true },
-    location: { type: String, required: true },
     features: { type: [String], default: [] },
-    insuranceIncluded: { type: Boolean, default: false },
     carType: {
       type: String,
       enum: ["SUV", "Sedan", "Hatchback", "Convertible", "Truck"],

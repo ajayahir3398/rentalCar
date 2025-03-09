@@ -7,11 +7,11 @@ const options = {
     info: {
       title: "API Documentation",
       version: "1.0.0",
-      description: "API documentation for your application",
+      description: "API documentation for your Node.js application",
     },
     servers: [
       {
-        url: "https://rentalcar-2pgb.onrender.com/api",
+        url: "https://rentalcar-2pgb.onrender.com",
       },
     ],
     components: {

@@ -15,9 +15,7 @@ exports.addCar = async (req, res) => {
       rentalPricePerDay,
       rentalPricePerHour,
       availability,
-      location,
       features,
-      insuranceIncluded,
       carType,
       engineCapacity,
       fuelCapacity,
@@ -57,7 +55,6 @@ exports.addCar = async (req, res) => {
       !mileage ||
       !rentalPricePerDay ||
       !rentalPricePerHour ||
-      !location ||
       !carType ||
       !engineCapacity ||
       !fuelCapacity ||
@@ -66,7 +63,9 @@ exports.addCar = async (req, res) => {
       !engineNo ||
       !permitType
     ) {
-      return res.status(400).json({ message: "All required fields must be filled" });
+      return res
+        .status(400)
+        .json({ message: "All required fields must be filled" });
     }
 
     // Create car
@@ -83,9 +82,7 @@ exports.addCar = async (req, res) => {
       rentalPricePerDay,
       rentalPricePerHour,
       availability,
-      location,
       features,
-      insuranceIncluded,
       carType,
       engineCapacity,
       fuelCapacity,
@@ -113,7 +110,9 @@ exports.addCar = async (req, res) => {
     });
 
     await newCar.save();
-    return res.status(201).json({ message: "Car added successfully", car: newCar });
+    return res
+      .status(201)
+      .json({ message: "Car added successfully", car: newCar });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Server error" });

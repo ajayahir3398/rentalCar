@@ -21,7 +21,6 @@ const router = express.Router();
  *         - mileage
  *         - rentalPricePerDay
  *         - rentalPricePerHour
- *         - location
  *         - carType
  *         - engineCapacity
  *         - fuelCapacity
@@ -56,14 +55,10 @@ const router = express.Router();
  *           type: number
  *         availability:
  *           type: boolean
- *         location:
- *           type: string
  *         features:
  *           type: array
  *           items:
  *             type: string
- *         insuranceIncluded:
- *           type: boolean
  *         carType:
  *           type: string
  *           enum: ["SUV", "Sedan", "Hatchback", "Convertible", "Truck"]
@@ -145,7 +140,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /cars/add:
+ * /api/cars/add:
  *   post:
  *     summary: Add a new car to the catalog
  *     tags: [Cars]
